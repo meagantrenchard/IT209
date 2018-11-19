@@ -1,32 +1,35 @@
-class Customer(object):
-  def __init__(self, cust_name, email, phone, address, member):
+class Customer():
+  def __init__(self, cust_name, email, phone, address):
     self.cust_name = cust_name
     self.email = email
     self.phone = phone
     self.address = address
-    self.member = member
-  def __str__(self):
-    return(str(self.cust_name) + ',' + str(self.email) + ',' + str(self.phone) + ',' + str(self.address) + ',' + boolen(self.member))
-
-class Book(object):
-  def __init__(self, title, ISBN, count, genre, author):
-    self.title = title
-    self.ISBN = ISBN
-    self.count = count
-    self.genre = genre
-    self.author = author
-  def __str__(self):
-    return(str(self.title) + ',' + str(self.ISBN) + ',' + int(self.count) + ',' + str(self.genre) + ',' + str(self.author))
-
+    membershipAcct = []
+    
+  def nameInput(self):
+    NI = input("Please enter your name: ")
+    return NI
   
-class Shelf(object):
-  def __init__(self, title, ISBN, count, genre, author, cust_name):
-    self.title = title
-    self.ISBN = ISBN
-    self.count = count
-    self.genre = genre
-    self.author = author 
-    self.cust_name = cust_name
+  def emailInput(self):
+    EI = input(int("Please enter your phone num: "))
+    return EI
+  
+  def addressInput(self):
+    AI = input("Please enter your address: "))
+    rerun AI
+  
+  def validateMembership(self):
+    VM = input("Do you have a membership with us: (y/n)?")
+    if VM == 'n':
+      membershipAcct.append(VM)
+      return "Congratualations, your membership is now created, and you are an official member"
+    
+    else:
+      return "You already have a membership with us!"
+   
   def __str__(self):
-    return(str(self.title) + ',' + str(self.ISBN) + ',' + int(self.count) + ',' + str(self.genre) + ',' + str(self.author) + ',' + str(self.cust_name))
-
+    return(str(self.cust_name) + ',' + str(self.email) + ',' + str(self.phone) + ',' + str(self.address))
+  
+  
+class Book():
+class Shelf():
